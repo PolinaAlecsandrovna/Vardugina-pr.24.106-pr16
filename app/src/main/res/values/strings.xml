@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Vardugina-Pr-24.106-16pr</string>
+    <string name="button">Save</string>
+    <string name="button2">Load</string>
 </resources>
