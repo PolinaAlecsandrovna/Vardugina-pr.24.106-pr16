@@ -1,24 +1,35 @@
 package com.example.vardugina_pr_24106_16pr;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText inputText;
+    private TextView outputText;
+    private String savedText = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        inputText = findViewById(R.id.inputText);
+        outputText = findViewById(R.id.outputText);
+        Button saveButton = findViewById(R.id.saveButton);
+        Button showButton = findViewById(R.id.showButton);
+
+        saveButton.setOnClickListener(v -> {
+            savedText = inputText.getText().toString();
+            Toast.makeText(MainActivity.this, "Сохранено!", Toast.LENGTH_SHORT).show();
         });
+
+        showButton.setOnClickListener(v -> outputText.setText(savedText));
     }
 }

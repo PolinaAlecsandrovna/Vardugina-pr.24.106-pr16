@@ -9,34 +9,54 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/outputText"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:background="@drawable/textview_border"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
         android:text=""
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputText"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:text=""
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintVertical_bias="0.324" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/saveButton"
         android:layout_width="170dp"
         android:layout_height="70dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="196dp"
         android:backgroundTint="#5E5E5E"
         android:text="@string/button"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/outputText" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/showButton"
         android:layout_width="170dp"
         android:layout_height="70dp"
         android:backgroundTint="#323232"
@@ -46,23 +66,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton"
         app:layout_constraintVertical_bias="0.246" />
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:background="@drawable/textview_border"
-        android:ems="10"
-        android:inputType="text"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.128" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
