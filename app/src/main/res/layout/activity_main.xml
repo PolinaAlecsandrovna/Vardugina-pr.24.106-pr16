@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/outputText"
+        android:id="@+id/textViewResult"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:background="@drawable/textview_border"
@@ -22,11 +22,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputText"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData"
         app:layout_constraintVertical_bias="0.031" />
 
     <EditText
-        android:id="@+id/inputText"
+        android:id="@+id/editTextData"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:background="@drawable/textview_border"
@@ -43,7 +43,7 @@
         app:layout_constraintVertical_bias="0.324" />
 
     <Button
-        android:id="@+id/saveButton"
+        android:id="@+id/btnSave"
         android:layout_width="170dp"
         android:layout_height="70dp"
         android:layout_marginTop="196dp"
@@ -53,10 +53,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outputText" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
 
     <Button
-        android:id="@+id/showButton"
+        android:id="@+id/btnLoad"
         android:layout_width="170dp"
         android:layout_height="70dp"
         android:backgroundTint="#323232"
@@ -66,7 +66,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/saveButton"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave"
         app:layout_constraintVertical_bias="0.246" />
 
 
